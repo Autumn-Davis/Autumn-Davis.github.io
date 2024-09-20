@@ -1,0 +1,83 @@
+ERRORS HTML 1
+
+Line 19:	</li>Item 6</li> should be <li>Item 6</li> get rid of / in first </li>
+
+Line 10:	<h1>Welcome to My Error-Filled Page, needs closing </h> tag
+
+Line 11:	This is a paragraph.</p> needs opening <p> tag
+
+Lines 13 & 24:	<ol> </ul> switches from organized list to unorganized list, should be   </ol> at end 
+
+Line 54:	<!-- This is a comment has no closing -->, should be <!--This is a comment-->
+
+Line 26:	<p>This is another paragraph. Needs closing </p> tag
+
+Line 48 :	“This is a paragraph with strikethrough text.” has no opening or closing tag, should be <s> and </s> 
+
+Line 64:	<h2 style="color:Tomato;">Hello World<h3> mismatched closing tag, should be </h2>
+
+Line 50:	“<p bgcolor="lightgray">Text</p>” is missing the style attribute, and “bgcolor” should be replaced with “background-color” like so: 
+<p style=“background-color: lightgray;”>Text</p>
+
+Line 61:	<li>Descriptive Item Title</li> should use title tags <dt> and </dt>
+
+Line 62:	<li>Descriptive Item Text</li> should use tags <dd> and </dd>
+
+Line 4:		<html language="en"> should be  <html lang="en"> and moved to line 1
+
+Line 2 and 66:	<head> at line 2 needs a closing </head> at line 66
+
+Line 58:	 <p><em>Underlined text</p></em> needs to have the </em> tag inside the paragraph, should be <p><em>Underlined text</em></p>
+
+Line 56:	<a href="#">Link,  needs to be <a href="#">Link</a>	 
+
+Line 45:	needs an indent and </table>
+
+ Line 53:	<input type="button" value="Click me"> needs to be <input type="button" value="Click me"/>
+
+Line 39:	<td>25<td> needs to be </td>
+
+Line 3:		need to close <head> with </head> at line 6 before <body>
+
+Line 1:		missing <!DOCTYPE html>, needs to be <!DOCTYPE html>
+
+Line 11:	missing closing </p>, needs closing </p> tag
+
+Line 48:	<img source="error.jpeg" alt="Error Image">, change “source” to “src”
+
+Line 31:	missing closing tag, needs to be <a href="find_errors_2.html" target="_blank">Click me!</a>, close with </a>
+Line 30 <img src="Image.jpg"> to <img src="Image.jpg">
+
+Line 49: <img src="error.jpeg" alt="Error Image"> to <img src="error.jpg" alt="Error Image">
+
+
+ERRORS HTML 2
+Line 2 :	needs  <html> before <head>
+
+Line 3:		needs the language clarified: should have <html lang="en">
+
+Line 6: 	<h1>Welcome to the second Error Filled Page</h1> should be in <body> section on line 8
+
+Line 7:		<head> needs to be closed with </head> tag before body
+
+Line 8: 	<body  needs closing, should be <body>
+
+Line 19: 	<this is a comment>. It should be  <!-- This is a comment -->
+
+Line 20: 	</htm> is misspelled. It should be </html>
+
+Line 11:	<img> tag It should be <img src="../html_midterm/image_2.jpg">
+
+Line 15:	This is a heading</h2> is missing opening tag <h2>
+
+Line 17:	Text</p> needs opening tag <p>
+
+Line 12:	<div> needs to be closed, should have </div> on line 10
+
+Line 11:		This is an <strong>important paragraph should have a closing tag for <strong>, should be This is an <strong>important paragraph</strong>
+
+Line 11:		<p>This is an <strong>important paragraph should have a closing tag for <p>, should be <p>This is an <strong>important paragraph</p>
+
+Line 13 	 missing Alt tag  “ meme”
+
+Line 7: 	nstead close with a back slash </body>
