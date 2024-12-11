@@ -21,19 +21,20 @@ function draw() {
   drawWinGame();
   
   if (mouseIsPressed) {
-    drawAlien();
+    drawFergus();
   } else {
-    drawOGship();
+    drawFergusShip();
   }
   
   if (dist(mouseX, mouseY, 50, 400) < 15){
     drawWinGame();
-    drawAlien();
+    drawFergusShip();
   } else{
     drawStarfield1();
     drawText();
     drawSpaceship();
-    drawPlanet();
+    drawVoid();
+    //drawFergusShipMoving();
   }
 }
 
@@ -240,44 +241,63 @@ function drawSpaceship() {
   pop();
 }
 
-function drawPlanet() {
+function moveSpaceship() {
+    if (mouseIsPressed) {
+      let toMouse = createVector(mouseX - posI.x, mouseY - posI.y).setMag(8);
+      vel = toMouse;
+    } else {
+      let toHome = createVector(50 - posI.x, 50 - posI.y).setMag(3);
+      vel = toHome;
+    }
+    posI.add(vel);
+  }
+
+function drawVoid() {
   push();
-  noStroke();
+  stroke(81, 97, 94)
   ellipseMode(CENTER);
-  fill(242, 104, 73);
+  fill(22, 40, 40);
   ellipse(50, 50, 200, 200);
-  fill(242, 132, 68);
+  fill(10, 20, 20);
   ellipse(50, 50, 175, 175);
-  //fill(242, 166, 73);
   ellipse(50, 50, 150, 150);
-  fill(191, 65, 54);
+  fill(0,0,0);
   ellipse(50, 50, 100, 100);
-  fill(242, 104, 73);
-  ellipse(50, 50, 75, 75);
-  fill(242, 132, 68);
-  ellipse(50, 50, 25, 25);
-  fill(242, 166, 73);
-  ellipse(50, 50, 5, 5);
-  fill(242, 166, 73);
   pop();
 }
 
-function moveSpaceship() {
-  if (mouseIsPressed) {
-    let toMouse = createVector(mouseX - posI.x, mouseY - posI.y).setMag(8);
-    vel = toMouse;
-  } else {
-    let toHome = createVector(50 - posI.x, 50 - posI.y).setMag(3);
-    vel = toHome;
-  }
-  posI.add(vel);
+function drawFergus() {
+    push();
+    stroke(180, 129, 37);
+    strokeWeight(2);
+    fill(140, 63, 13);
+    ellipse(mouseX, mouseY, 9, 11); //body
+    line(mouseX + 5.5, mouseY, mouseX + 8, mouseY - 3);
+    line(mouseX - 5.5, mouseY, mouseX - 8, mouseY - 3);
+    line(mouseX + 5.5, mouseY + 4, mouseX + 4, mouseY + 6);
+    line(mouseX - 5.5, mouseY + 4, mouseX - 4, mouseY + 6);
+    ellipse(mouseX, mouseY - 6, 8, 9); //head
+    pop();
+    push();
+    stroke(180, 129, 37, 20);
+    fill(163, 201, 250, 40);
+    ellipse(mouseX, mouseY - 6, 10, 10);
+    pop();
 }
 
-function drawAlien() {
+function drawFergusShip() {
+  ellipseMode(CENTER);
+  stroke(140, 223, 3);
+  fill(140, 63, 13);
+  ellipse(mouseX, mouseY, 50, 40);
+  fill(81, 97, 94);
+  arc(mouseX, mouseY, 50, 40, PI, 2*PI);
+
+  //Fergus for in ship
   push();
-  stroke(72, 116, 99);
+  stroke(180, 129, 37);
   strokeWeight(2);
-  fill(34, 81, 73);
+  fill(140, 63, 13);
   ellipse(mouseX, mouseY, 9, 11); //body
   line(mouseX + 5.5, mouseY, mouseX + 8, mouseY - 3);
   line(mouseX - 5.5, mouseY, mouseX - 8, mouseY - 3);
@@ -286,19 +306,17 @@ function drawAlien() {
   ellipse(mouseX, mouseY - 6, 8, 9);
   pop();
   push();
-  stroke(145, 176, 157, 50);
-  fill(163, 201, 250, 50);
+  stroke(180, 129, 37, 20);
+  fill(163, 201, 250, 40);
   ellipse(mouseX, mouseY - 6, 10, 10);
   pop();
 }
 
-function drawOGship() {
-  textAlign(CENTER);
-  textSize(50);
-  text('🚀', mouseX, mouseY)
-  // ellipseMode(CENTER);
-  // stroke(5, 16, 14);
-  // fill(163, 201, 250, 120);
-  // ellipse(mouseX, mouseY, 20, 25);
-  
-}
+// function drawFergusShipMoving() {
+//     ellipseMode(CENTER);
+//     stroke(140, 223, 3);
+//     fill(140, 63, 13);
+//     ellipse(randomX, mouseY, 50, 40);
+//     fill(81, 97, 94);
+//     arc(randomX, mouseY, 50, 40, PI, 2*PI);
+// }
