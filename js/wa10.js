@@ -17,7 +17,7 @@ function result() {
 
     console.log("testing");
 
-    let newStory = "It was 94 farenheit in the forrest, so :insertx: left home to forrage. When they got to :inserty:, they spotted a massive wheel of cheese rolling toward them, so they :insertz:. Bob saw the whole thing, but was not surprised — :insertx: is 300 pounds, clumsy, and loves cheese.";
+    let newStory = "It was 94 fahrenheit in the forrest, so :insertx: left home to forrage. When they got to :inserty:, they spotted a massive wheel of cheese rolling toward them, so they :insertz:. Bob saw the whole thing, but was not surprised — :insertx: is 300 pounds, clumsy, and loves cheese.";
 
     if(document.getElementById("uk").checked) {
         const weight = Math.round(300 / 14);
@@ -39,6 +39,4 @@ function result() {
 
     story.textContent = newStory;
     story.style.visibility = 'visible';
-
-    
 }
